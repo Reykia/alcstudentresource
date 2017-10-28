@@ -1,0 +1,50 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header"> 
+      <a class="navbar-brand" href="#">Students' Resource App</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a [routerLink]="['/student-create']" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+<br><br><br>
+<h3 align="center">
+Students List
+</h3>
+<br>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Sex</th>
+        <th>Level</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students; let index = index;">
+        <td>{{index + 1}}. {{ student.firstname }}</td>
+        <td>{{ student.lastname }}</td>
+        <td>{{ student.sex }}</td>
+        <td>{{ student.level }}</td>
+        <td><a [routerLink]="['/student-details', student._id]">Show Details</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Total Number of Students:</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th *ngFor="let student of students; let index = index;">{{index.length}}</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>

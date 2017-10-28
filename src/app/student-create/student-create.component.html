@@ -1,0 +1,64 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Students' Resource App</a>
+    </div>
+  </div>
+</nav>
+
+<br><br><br>
+<h3 align="center">
+  Add New Student
+</h3>
+<br>
+
+<div class="container">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveStudent()" #studentForm="ngForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">First Name</label>
+          <input type="text" class="form-control" [(ngModel)]="student.firstname" name="firstname" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Last Name</label>
+          <input type="text" class="form-control" [(ngModel)]="student.lastname" name="lastname" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Sex</label>
+          <select class="form-control" [(ngModel)]="student.sex" name="sex" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Roll Number</label>
+          <input type="text" class="form-control" [(ngModel)]="student.roll_no" name="rollnumber" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Faculty</label>
+          <input type="text" class="form-control" [(ngModel)]="student.faculty" name="faculty" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Department</label>
+          <input type="text" class="form-control" [(ngModel)]="student.department" name="department" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Level</label>
+          <select class="form-control" [(ngModel)]="student.level" name="level" required>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+          </select>
+        </div>
+        <!--<div class="form-group">
+          <label for="name">Attach Photo</label>
+          <input type="file"  class="form-control" [(ngModel)]="student.photo" name="photo" required>
+        </div>-->
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!studentForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+</div>
