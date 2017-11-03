@@ -9,7 +9,7 @@ import { StudentService } from '../student.service';
 })
 export class StudentCreateComponent implements OnInit {
 
-  student = {({
+  student = ({
   firstname: String,
   lastname: String,
   sex: String,
