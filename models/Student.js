@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGOLAB_URI || 'monogdb://heroku_ncj00r1l:2236i5pseeb8jogckck6vghm0v@ds245805mlab.com:45805/heroku_ncj00r1k');
+mongoose.connect(process.env.MONGOLAB_URI || 'monogdb://heroku_tc8dt4nn:2jmvhlmhcmqhrifugt4a4q7t0p@ds145275.mlab.com:45275/heroku_tc8dt4nn');
 
 var StudentSchema = new mongoose.Schema({
   firstname: String,
