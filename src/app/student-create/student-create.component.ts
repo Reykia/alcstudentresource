@@ -9,7 +9,15 @@ import { StudentService } from '../student.service';
 })
 export class StudentCreateComponent implements OnInit {
 
-  student = {};
+  student = {({
+  firstname: String,
+  lastname: String,
+  sex: String,
+  roll_no: String,
+  faculty: String,
+  department: String,
+  level: Number,
+});
 
   constructor(private studentService: StudentService, private router: Router) { }
 
